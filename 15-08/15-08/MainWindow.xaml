@@ -1,0 +1,36 @@
+﻿<Window x:Class="_15_08.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_15_08" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        FontSize="20"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="50">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <StackPanel Margin="10">
+                <TextBlock Text="ФИО (мин: 10. макс: 60): "/>
+                <TextBox x:Name="txtFio"  Width="250" TextChanged="txtFio_TextChanged"  />
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="E-mail: "/>
+                <TextBox x:Name="txtEmail"  Width="250" TextChanged="txtEmail_TextChanged"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Телефон: "/>
+                <xctk:MaskedTextBox x:Name="txtPhone"  Mask="+0 (000) 000-00-00" Width="250"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Адрес (мин: 20. макс: 85): "/>
+                <TextBox x:Name="txtAddress" Width="250"  TextChanged="txtAddress_TextChanged"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
