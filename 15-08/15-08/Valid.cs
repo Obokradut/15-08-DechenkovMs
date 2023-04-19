@@ -1,4 +1,6 @@
-﻿namespace _15_08
+﻿using System.Text.RegularExpressions;
+
+namespace _15_08
 {
     public static class Valid
     {
@@ -20,15 +22,10 @@
 
         public static bool IsEmailValid(string email)
         {
-            try
-            {
-                var mail = new System.Net.Mail.MailAddress(email).Host;
+            if(Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
+            else
+                return false;            
         }
     }
 }
